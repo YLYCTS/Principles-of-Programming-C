@@ -3,7 +3,7 @@ int main (void)
 {
     double a;
 
-    printf("»ªÊÏÎÂ¶È ---> ÉãÊÏÎÂ¶È \n");
+    printf("Â»ÂªÃŠÃÃÃ‚Â¶Ãˆ ---> Ã‰Ã£ÃŠÃÃÃ‚Â¶Ãˆ \n");
 
     // output
     for (int i  = 0; i <= 300; i += 30)
@@ -12,7 +12,7 @@ int main (void)
         printf("   %3d      %7.3f \n", i, a);
     }
 
-    printf("\nÉãÊÏÎÂ¶È ---> »ªÊÏÎÂ¶È\n");
+    printf("\nÃ‰Ã£ÃŠÃÃÃ‚Â¶Ãˆ ---> Â»ÂªÃŠÃÃÃ‚Â¶Ãˆ\n");
     
     // output
     for (int i = 0; i <= 300; i+= 30)
