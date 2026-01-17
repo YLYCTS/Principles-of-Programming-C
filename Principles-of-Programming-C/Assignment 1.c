@@ -12,7 +12,8 @@ int main (void)
     }
 
     printf("\nÉãÊÏÎÂ¶È ---> »ªÊÏÎÂ¶È\n");
-
+    
+    // output
     for (int i = 0; i <= 300; i+= 30)
     {
         a = i * 9 / 5 + 32;
