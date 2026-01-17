@@ -21,6 +21,7 @@ int main (void)
 
     char input;
 
+    // Wait for user to input 'q' to quit
     do
     {
         printf("Please input q to quit\n");
