@@ -5,6 +5,7 @@ int main (void)
 
     printf("»ªÊÏÎÂ¶È ---> ÉãÊÏÎÂ¶È \n");
 
+    // output
     for (int i  = 0; i <= 300; i += 30)
     {
         a =  5 * (i - 32) / 9.0;
