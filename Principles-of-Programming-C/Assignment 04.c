@@ -1,5 +1,5 @@
 #include <stdio.h>
-//¶¨Òåº¯Êı
+//å®šä¹‰å‡½æ•°
 int find_max(int count, int outcome[]);
 int find_min(int count, int outcome[]);
 int summation(int count, int outcome[]);
@@ -12,62 +12,62 @@ int main(void)
     int count = 0;
     while (1)
     {
-        printf("»¶Ó­À´µ½»õÎïÖÊÁ¿µ¥Î»Í³Ò»»»ËãÏµÍ³¡£1Ç§¿Ë=1000¿Ë,1°÷=16°»Ë¾,1°÷=454¿Ë¡£\n");
-        printf("ÇëÊäÈë»õÎïµÄÖÊÁ¿Êı(ÕıÕûÊı)¡£\n");
+        printf("æ¬¢è¿æ¥åˆ°è´§ç‰©è´¨é‡å•ä½ç»Ÿä¸€æ¢ç®—ç³»ç»Ÿã€‚1åƒå…‹=1000å…‹,1é•‘=16ç›å¸,1é•‘=454å…‹ã€‚\n");
+        printf("è¯·è¾“å…¥è´§ç‰©çš„è´¨é‡æ•°(æ­£æ•´æ•°)ã€‚\n");
 
-        //ÅĞ¶ÏÊÇ·ñÎªÕı³£ÊäÈë
+        //åˆ¤æ–­æ˜¯å¦ä¸ºæ­£å¸¸è¾“å…¥
     renew_1:
         if ((scanf("%d", &weight)) != 1 || weight < 0 || weight > 10000)
         {
-            printf("·Ç·¨ÊäÈë£¬ĞèÒª[0,10000]±ÕÇø¼äµÄÕıÕûÊı¡£\n");
+            printf("éæ³•è¾“å…¥ï¼Œéœ€è¦[0,10000]é—­åŒºé—´çš„æ­£æ•´æ•°ã€‚\n");
             while (getchar() != '\n')
                 ;
             goto renew_1;
         }
         if (weight >= 0 && weight <= 10000)
         {
-            printf("ÇëÊäÈë»õÎïµÄÖÊÁ¿µ¥Î»(g,G-¿Ë,k,K-Ç§¿Ë,o,O-°»Ë¾,p,P-°÷£©,ÊäÈëx³ÌĞòÍË³ö¡£\n");
+            printf("è¯·è¾“å…¥è´§ç‰©çš„è´¨é‡å•ä½(g,G-å…‹,k,K-åƒå…‹,o,O-ç›å¸,p,P-é•‘ï¼‰,è¾“å…¥xç¨‹åºé€€å‡ºã€‚\n");
             while (getchar() != '\n')
                 ;
             if ((scanf("%c", &unit)) != 1)
             {
-                printf("·Ç·¨ÊäÈë,ĞèÒª(g,G-¿Ë,k,K-Ç§¿Ë,o,O-°»Ë¾,p,P-°÷£©,ÊäÈëx³ÌĞòÍË³ö¡£\n");
+                printf("éæ³•è¾“å…¥,éœ€è¦(g,G-å…‹,k,K-åƒå…‹,o,O-ç›å¸,p,P-é•‘ï¼‰,è¾“å…¥xç¨‹åºé€€å‡ºã€‚\n");
                 while (getchar() != '\n')
                     ;
                     continue;
             }
-            //¸ù¾İÑ¡Ôñ£¬½øĞĞµ¥Î»»»Ëã
+            //æ ¹æ®é€‰æ‹©ï¼Œè¿›è¡Œå•ä½æ¢ç®—
             switch (unit)
             {
                 case 'g':
                 case 'G':
                     outcome[count++] = weight;
-                    printf("µÚ%d¸ö»õÎïµÄÖÊÁ¿ÊÇ%d¿Ë\n", count, outcome[count - 1]);
+                    printf("ç¬¬%dä¸ªè´§ç‰©çš„è´¨é‡æ˜¯%då…‹\n", count, outcome[count - 1]);
                     continue;
                 case 'k':
                 case 'K':
                     outcome[count++] = weight * 1000;
-                    printf("µÚ%d¸ö»õÎïµÄÖÊÁ¿ÊÇ%d¿Ë\n", count, outcome[count - 1]);
+                    printf("ç¬¬%dä¸ªè´§ç‰©çš„è´¨é‡æ˜¯%då…‹\n", count, outcome[count - 1]);
                     continue;
                 case 'o':
                 case 'O':
                     outcome[count++] = (int) (weight * 454 / 16.0 + 0.5);
-                    printf("µÚ%d¸ö»õÎïµÄÖÊÁ¿ÊÇ%d¿Ë\n", count, outcome[count - 1]);
+                    printf("ç¬¬%dä¸ªè´§ç‰©çš„è´¨é‡æ˜¯%då…‹\n", count, outcome[count - 1]);
                     continue;
                 case 'p':
                 case 'P':
                     outcome[count++] = weight * 454;
-                    printf("µÚ%d¸ö»õÎïµÄÖÊÁ¿ÊÇ%d¿Ë\n", count, outcome[count - 1]);
+                    printf("ç¬¬%dä¸ªè´§ç‰©çš„è´¨é‡æ˜¯%då…‹\n", count, outcome[count - 1]);
                     continue;
                 case 'x':
-                    //×îºó½øĞĞ×Ü½á
-                    printf("×îÖØ»õÎïµÄÖÊÁ¿ÊÇ%d¿Ë\n", find_max(count, outcome));
-                    printf("×îÇá»õÎïµÄÖÊÁ¿ÊÇ%d¿Ë\n", find_min(count, outcome));
-                    printf("»õÎïµÄÈ«²¿×ÜÖÊÁ¿ÊÇ%d¿Ë\n", summation(count, outcome));
-                    printf("»õÎïµÄÆ½¾ÖÖÊÁ¿ÊÇ%d¿Ë\n", (int) (summation(count, outcome) / (float) count + 0.5));
+                    //æœ€åè¿›è¡Œæ€»ç»“
+                    printf("æœ€é‡è´§ç‰©çš„è´¨é‡æ˜¯%då…‹\n", find_max(count, outcome));
+                    printf("æœ€è½»è´§ç‰©çš„è´¨é‡æ˜¯%då…‹\n", find_min(count, outcome));
+                    printf("è´§ç‰©çš„å…¨éƒ¨æ€»è´¨é‡æ˜¯%då…‹\n", summation(count, outcome));
+                    printf("è´§ç‰©çš„å¹³å±€è´¨é‡æ˜¯%då…‹\n", (int) (summation(count, outcome) / (float) count + 0.5));
                     return 0;
                 default:
-                    printf("·Ç·¨ÊäÈë,ĞèÒª(g,G-¿Ë,k,K-Ç§¿Ë,o,O-°»Ë¾,p,P-°÷£©,ÊäÈëx³ÌĞòÍË³ö¡£\n");
+                    printf("éæ³•è¾“å…¥,éœ€è¦(g,G-å…‹,k,K-åƒå…‹,o,O-ç›å¸,p,P-é•‘ï¼‰,è¾“å…¥xç¨‹åºé€€å‡ºã€‚\n");
                     continue;
             }
         }
@@ -75,7 +75,7 @@ int main(void)
     return 0;
 }
 
-//Ñ°ÕÒ×î´óÖµ
+//å¯»æ‰¾æœ€å¤§å€¼
 int find_max(int count, int outcome[])
 {
     int max = outcome[0];
@@ -89,7 +89,7 @@ int find_max(int count, int outcome[])
     return max;
 }
 
-//Ñ°ÕÒ×îĞ¡Öµ
+//å¯»æ‰¾æœ€å°å€¼
 int find_min(int count, int outcome[])
 {
     int min = outcome[0];
@@ -103,7 +103,7 @@ int find_min(int count, int outcome[])
     return min;
 }
 
-//¶ÔËùÓĞ»õÎïµÄÖÊÁ¿½øĞĞÇóºÍ
+//å¯¹æ‰€æœ‰è´§ç‰©çš„è´¨é‡è¿›è¡Œæ±‚å’Œ
 int summation(int count, int outcome[])
 {
     int sum = 0;
