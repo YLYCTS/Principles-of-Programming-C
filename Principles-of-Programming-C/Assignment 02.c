@@ -18,11 +18,11 @@ int main()
     int quit = 0;
     int exit = 0;
 
-    printf("ÇëÊäÈëĞèÒª¼ÆËã½×³ËµÄÕıÕûÊı[1,20]£¬ÊäÈë-1Ê±³ÌĞòÍË³ö\n");
+    printf("è¯·è¾“å…¥éœ€è¦è®¡ç®—é˜¶ä¹˜çš„æ­£æ•´æ•°[1,20]ï¼Œè¾“å…¥-1æ—¶ç¨‹åºé€€å‡º\n");
 
     fgets(input, sizeof(input), stdin);
 
-    //ÅĞ¶ÏÊÇ·ñÓĞÔàÊäÈë£¬ÈôÓĞÔàÊäÈë£¬ÔòÖØĞÂÊäÈë
+    //åˆ¤æ–­æ˜¯å¦æœ‰è„è¾“å…¥ï¼Œè‹¥æœ‰è„è¾“å…¥ï¼Œåˆ™é‡æ–°è¾“å…¥
     while(input[tmp] != '\0')
     {
         if (isalpha(input[tmp]) && (input[tmp] != '-' && input[tmp] != '+'))
@@ -33,11 +33,11 @@ int main()
     }
     if (exit == 1)
     {
-        printf("·Ç·¨ÊäÈë£¬");
+        printf("éæ³•è¾“å…¥ï¼Œ");
         continue;
     }
 
-    //½«ÊäÈëµÄ×Ö·û´®ÖĞµÄÊı×Ö£¬×ª»¯ÎªÕûĞÍ±äÁ¿µÄÊı×Ö
+    //å°†è¾“å…¥çš„å­—ç¬¦ä¸²ä¸­çš„æ•°å­—ï¼Œè½¬åŒ–ä¸ºæ•´å‹å˜é‡çš„æ•°å­—
     while(input[i] != '\0' && input[i] != '\n')
     {
         while (input[i] == ' ')
@@ -67,7 +67,7 @@ int main()
     {
         if(num[i] >= 1 && num[i] <= 20)
         {
-            printf("%dµÄ½×³ËÊÇ%lld\n", num[i], factorial(num[i]));
+            printf("%dçš„é˜¶ä¹˜æ˜¯%lld\n", num[i], factorial(num[i]));
         }
 
         else if (num[i] == -1)
@@ -81,7 +81,7 @@ int main()
     }
     }
 }
-//½×³Ëº¯Êı
+//é˜¶ä¹˜å‡½æ•°
 long long factorial(int input)
 {
     long long tmp;
